@@ -1,0 +1,166 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'estilos.css' %}"  type="text/css">
+    <link rel="shortcut icon" href="{% static 'imagenes/cyberok.ico' %}" type="Cyber CV">
+    <link rel="icon" href="{% static 'imagenes/cyberok.ico' %}" type="Cyber CV">
+    <title>Armado del CV</title>
+</head>
+<body>
+    <div class = "contenedor">
+        <div id = "titulo">
+            <h1>Crea tu curriculum actualizado</h1>
+            <h2>Completa los campos correctamente, recuerda que es para vos</h2>
+        </div>
+        <div class = "formulario">
+            
+            <h3>Información personal</h3>
+            <hr>
+            <form action="envio/" method="post" enctype = "multipart / form-data">
+                {% csrf_token %}
+                <label>Nombre: <input type="text" name="nombre" size="40" required></label>
+                <label>Apellido: <input type="text" name="apellido" size="40" required></label>
+                <label>Fecha de nacimiento: <input type="date" name = "fecha-de-nacimiento" id = "date" value = "2021-12-26" min = "1945-01-01" max = "2021-12-31" required></label>
+                <label>Lugar de nacimiento: <input type="text" name="lugar-de-nacimiento" size="40"></label>
+                <label>Edad: <input type="number" name="edad" size="40" required></label>
+                <label>DNI: <input type="number" name="dni" size="40" required>(sin puntos ni guiones)</label>
+                <label>CUIL: <input type="number" name="cuil" size="40" required>(sin puntos ni guiones)</label>
+                <label>Estado civil:
+                    <div class="multiple">
+                        <input type="radio" name="estado" value="soltero"> Soltero/a
+                        <input type="radio" name="estado" value="casado"> Casado/a
+                    </div>
+                </label>
+                <label>Dirección: <input type="text" name="direccion" size="40" required></label>
+                <label>Altura: <input type="number" name="altura" size="40" required></label>
+                <label>Localidad: <input type="text" name="localidad" size="40"></label>
+                <label>Celular: <input type="number" name="celular" size="40" required>(sin el 0 ni el 15)</label>
+                <label>Correo electrónico: <input type="email" name = "correo" id="email" size="30"></label>
+              
+            <h3>Estudios cursados</h3>
+            <hr>
+        
+                <label>Primario:
+                    <div class="multiple">
+                        <input type="radio" name="primario" value="completo"> Completo
+                        <input type="radio" name="primario" value="incompleto"> Incompleto
+                        <input type="radio" name="primario" value="en-curso"> En curso
+                        <label>Institución:
+                            <input type="text" name="institucion-primario" size="40">
+                        </label>
+                    </div>
+                </label>
+                <label>Secundario:
+                    <div class="multiple">
+                        <input type="radio" name="secundario" value="completo"> Completo
+                        <input type="radio" name="secundario" value="incompleto"> Incompleto
+                        <input type="radio" name="secundario" value="en-curso"> En curso
+                        <label>Institución:
+                            <input type="text" name="institucion-secundario" size="20">
+                        </label>
+                        <label>Título:
+                            <input type="text" name="titulo-secundario" size="30">
+                        </label>
+                    </div>
+                </label>
+                <label>Terciario:
+                    <div class="multiple">
+                        <input type="radio" name="terciario" value="completo"> Completo
+                        <input type="radio" name="terciario" value="incompleto"> Incompleto
+                        <input type="radio" name="terciario" value="en-curso"> En curso
+                        <label>Institución:
+                            <input type="text" name="institucion-terciario" size="20">
+                        </label>
+                        <label>Título:
+                            <input type="text" name="titulo-terciario" size="30">
+                        </label>
+                    </div>
+                </label>
+                <label>Universitario:
+                    <div class="multiple">
+                        <input type="radio" name="universitario" value="completo"> Completo
+                        <input type="radio" name="universitario" value="incompleto"> Incompleto
+                        <input type="radio" name="universitario" value="en-curso"> En curso
+                        <label>Institución:
+                            <input type="text" name="institucion-universitario" size="20">
+                        </label>
+                        <label>Título:
+                            <input type="text" name="titulo-universitario" size="30">
+                        </label>
+                    </div>
+                </label>
+                <label>Otros conocimientos: 
+                    <textarea name="otros-conocimientos" rows="10" cols="40">Sea en maquinaria, computación, habilidades</textarea>
+                </label>
+                <label>Cursos: 
+                    <textarea name="cursos" rows="10" cols="40"></textarea>
+                </label>
+
+                <label>Idiomas:
+                    <div class="multiple">
+                        <input type="checkbox" name="idiomas" value="Inglés"> Inglés
+                        <input type="checkbox" name="idiomas" value="Portugués"> Portugués
+                        <input type="checkbox" name="idiomas" value="Frances"> Frances
+                    </div>
+                </label>
+                <label>Otro: <input type="text" name="otro" size="40"></label>
+                
+              
+            <h3>Experiencia laboral</h3>
+            <hr>
+            <p>Coloca tu experiencia laboral, no importa que no te acuerdes de algún dato. Vamos a trabajar para que quede lo mejor posible</p>
+            
+            <div class="experiencias">
+                <div class="experiencia">
+                    <label>Nombre de la empresa: <input type="text" name="empresa-uno" size="40"></label>
+                    <label>Tareas desarrolladas:  <textarea name="tareas-uno" rows="5" cols="40"></textarea></label>
+                    <label>Período sea fecha o tiempo: <input type="text" name="periodo-uno" size="40"></label>
+                    <label>Referencia: <input type="number" name="referencia-uno" size="40"></label>
+                    <br>
+                </div>
+                <div class="experiencia">
+                    <label>Nombre de la empresa: <input type="text" name="empresa-dos" size="40"></label>
+                    <label>Tareas desarrolladas:  <textarea name="tareas_dos" rows="5" cols="40"></textarea></label>
+                    <label>Período sea fecha o tiempo: <input type="text" name="periodo-dos" size="40"></label>
+                    <label>Referencia: <input type="number" name="referencia-dos" size="40"></label>
+                    <br>
+                </div>
+                <div class="experiencia">
+                    <label>Nombre de la empresa: <input type="text" name="empresa-tres" size="40"></label>
+                    <label>Tareas desarrolladas:  <textarea name="tareas-tres" rows="5" cols="40"></textarea></label>
+                    <label>Período sea fecha o tiempo: <input type="text" name="periodo-tres" size="40"></label>
+                    <label>Referencia: <input type="number" name="referencia-tres" size="40"></label>
+                    <br>
+                </div>
+                <div class="experiencia">
+                    <label>Nombre de la empresa: <input type="text" name="empresa-cuatro" size="40"></label>
+                    <label>Tareas desarrolladas:  <textarea name="tareas-cuatro" rows="5" cols="40"></textarea></label>
+                    <label>Período sea fecha o tiempo: <input type="text" name="periodo-cuatro" size="40"></label>
+                    <label>Referencia: <input type="number" name="referencia-cuatro" size="40"></label>
+                    <br>
+                </div>
+                <label>Experiencias:
+                    <textarea name="experiencias" rows="15" cols="40">Coloca en ítems lo que hayas realizado, alguna experiencia en un entorno familiar como cuidar de un sobrino o atender el negocio de la familia. Todo suma</textarea>
+                </label>
+
+            </div>
+            
+            <h3>Perfil</h3>
+            <hr>
+            <label>Perfil laboral / Objetivos: 
+                <textarea name="perfil" rows="10" cols="40"></textarea>
+            </label>
+            <div class="botones">
+                <button type = "submit">Enviar</button>
+                <button type = "reset">Borrar</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

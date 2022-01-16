@@ -1,0 +1,205 @@
+.contenedor{
+    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    border-radius: 2em;
+    margin: auto;
+    align-items: center;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 1em;
+    font-size: 1.2em;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 70%;
+}
+
+.formulario{
+    padding: 1em;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 1em;
+}
+
+label{
+    margin: 0.8em;
+}
+
+textarea{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+    margin: 0.9em;
+}
+
+.experiencias{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1em;
+    margin: 0.9em;
+}
+.experiencia{
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border: 0.14em solid #00000096;
+    border-radius: 0.5em;
+}
+
+hr{
+    width: 30%;
+    display: inline-block;
+    margin-inline-start: 0em;
+}
+
+h3{
+    padding-top: 1em;
+}
+
+
+body {
+    background-image: url('imagenes/fondo.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.botones{
+    display: flex;
+    flex-direction: row !important;
+    justify-content: space-evenly;
+}
+button{
+    
+    border: 1px solid #2e518b;
+    padding: 0.5em;
+    background-color: #2e518b; 
+    color: #ffffff; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1em;
+    border-radius: 0.7em;
+    
+}
+input{
+    padding: 0.5em;
+    margin: 0.6em;
+}
+
+.multiple{
+    padding: 1em;
+}
+
+
+/*Media QUERIES*/
+
+@media screen and (max-width:400px) {
+    body{
+        width: 100%;
+        padding: 0%;
+        margin: 0%;
+    }
+    #titulo{
+        padding: 1em;
+    }
+    .contenedor{
+        background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+        margin: 0.5em;
+        padding: 0.4em;
+        padding-right: 0%;
+        border-radius: 0.8em;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 0.9em;
+        width: 95%;
+    }
+    .formulario{
+        width: 90%;
+        padding: 0%;
+        align-items: center;
+    }
+
+    .experiencias{
+        padding: 0%;
+        margin: 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    label{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    textarea{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0.2em;
+    }
+
+    .multiple{
+        display: inline;
+    }
+
+}
+@media screen and (min-width:401px) and (max-width: 640px) {
+    body{
+        width: 100%;
+        padding: 0%;
+        margin: 0%;
+    }
+    .contenedor{
+        background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+        margin: center;
+        padding: 1em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        border-radius: 1em;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        font-size: 1.05em;
+        width: 85%;
+    }
+    .formulario{
+        width: 100%;
+        padding: 0%;
+    }
+
+    .experiencias{
+        padding: 0%;
+        margin: 0%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    label{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+    textarea{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        padding: 0.2em;
+    }
+
+    .multiple{
+        display: inline;
+    }
+    
+}
