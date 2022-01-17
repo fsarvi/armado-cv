@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from projectcv.views import armado_curriculum, envio_curriculum
+from armadocv.views import armado_curriculum, envio_curriculum
 
 urlpatterns = [
     path('admin/', admin.site.urls),

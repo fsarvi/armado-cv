@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-STATICFILES_DIRS = ['C:/Users/Fati/Documents/PROYECTOS/projectcv/Templates/static']
+STATICFILES_DIRS = ['C:/Users/Fati/Documents/PROYECTOS/armado-cv/Templates/static']
 # Application definition
 
 INSTALLED_APPS = [
@@ -49,12 +49,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'projectcv.urls'
+ROOT_URLCONF = 'armadocv.urls'
 
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': ["C:/Users/Fati/Documents/PROYECTOS/projectcv/Templates"],
+        'DIRS': ["C:/Users/Fati/Documents/PROYECTOS/armado-cv/Templates"],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -67,7 +67,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'projectcv.wsgi.application'
+WSGI_APPLICATION = 'armadocv.wsgi.application'
 
 
 # Database

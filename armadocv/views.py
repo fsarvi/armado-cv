@@ -21,51 +21,56 @@ def envio_curriculum(request):
     edad = request.POST["edad"]
     dni = request.POST["dni"]
     cuil = request.POST["cuil"]
-    estado_civil = request.POST["estado"]
+    estado_civil = request.POST.get("estado", " ")
     direccion = request.POST["direccion"]
     altura = request.POST["altura"]
     localidad = request.POST["localidad"]
     celular = request.POST["celular"]
     correo = request.POST["correo"]
-    primario = request.POST["primario"]
+    primario = request.POST.get("primario", " ")
     institucion_primario = request.POST["institucion-primario"]
-    secundario = request.POST["secundario"]
+    secundario = request.POST.get("secundario", " ")
     institucion_secundario = request.POST["institucion-secundario"]
-    terciario = request.POST["terciario"]
+    titulo_secundario = request.POST["titulo-secundario"]
+    terciario = request.POST.get("terciario", " ")
     institucion_terciario = request.POST["institucion-terciario"]
-    universitario = request.POST["universitario"]
+    titulo_terciario = request.POST["titulo-terciario"]
+    universitario = request.POST.get("universitario", " ")
     institucion_universitario = request.POST["institucion-universitario"]
+    titulo_universitario = request.POST["titulo-universitario"]
     otros_conocimientos = request.POST["otros-conocimientos"]
     cursos = request.POST["cursos"]
-    idiomas = request.POST["idiomas"]
+    idiomas = request.POST.get("idiomas", " ")
     nombre_empresa_uno = request.POST["empresa-uno"]
-    tareas_empresa_uno = request.POST["tareas-uno"]
+    tareas_empresa_uno = request.POST.get("tareas-uno", " ")
     periodo_empresa_uno = request.POST["periodo-uno"]
     referencia_empresa_uno = request.POST["referencia-uno"]
     nombre_empresa_dos = request.POST["empresa-dos"]
-    tareas_empresa_dos = request.POST["tareas-dos"]
+    tareas_empresa_dos = request.POST.get("tareas-dos", " ")
     periodo_empresa_dos = request.POST["periodo-dos"]
     referencia_empresa_dos = request.POST["referencia-dos"]
     nombre_empresa_tres = request.POST["empresa-tres"]
-    tareas_empresa_tres = request.POST["tareas-tres"]
+    tareas_empresa_tres = request.POST.get("tareas-tres", " ")
     periodo_empresa_tres = request.POST["periodo-tres"]
     referencia_empresa_tres = request.POST["referencia-tres"]
     nombre_empresa_cuatro = request.POST["empresa-cuatro"]
-    tareas_empresa_cuatro = request.POST["tareas-cuatro"]
+    tareas_empresa_cuatro = request.POST.get("tareas-cuatro", " ")
     periodo_empresa_cuatro = request.POST["periodo-cuatro"]
     referencia_empresa_cuatro = request.POST["referencia-cuatro"]
-    experiencias = request.POST["experiencias"]
-    perfil = request.POST["perfil"]
+    experiencias = request.POST.get("experiencias", " ")
+    perfil = request.POST.get("perfil", " ")
 
     datos_cv = [{"nombre": name, "apellido": apellido,
                  "fecha_de_nacimiento": fecha_de_nacimiento, "lugar_de_nacimiento": lugar_de_nacimiento,
                  "edad": edad, "dni": dni, "cuil": cuil, "estado_civil": estado_civil, "direccion": direccion, "altura": altura,
                  "localidad": localidad,
                  "celular": celular, "correo": correo, "primario": primario,
-                 "institucion_primario": institucion_primario, "secundario": secundario, "institucion_secundario": institucion_secundario,
+                 "institucion_primario": institucion_primario, "secundario": secundario, 
+                 "institucion_secundario": institucion_secundario, "titulo_secundario": titulo_secundario,
                  "terciario": terciario,
-                 "institucion_terciario": institucion_terciario, "universitario": universitario,
-                 "institucion_universitario": institucion_universitario,
+                 "institucion_terciario": institucion_terciario, "titulo_terciario": titulo_terciario,
+                  "universitario": universitario,
+                 "institucion_universitario": institucion_universitario, "titulo_universitario": titulo_universitario,
                  "otros_conocimientos": otros_conocimientos, "cursos": cursos, "idiomas": idiomas,
                  "nombre_empresa_uno": nombre_empresa_uno, "tareas_empresa_uno": tareas_empresa_uno,
                  "periodo_empresa_uno": periodo_empresa_uno, "referencia_empresa_uno": referencia_empresa_uno,
@@ -119,13 +124,13 @@ def generar_docx(datos_cv):
                    institucion_primario=datos["institucion_primario"],
                    secundario=datos["secundario"],
                    institucion_secundario=datos["institucion_secundario"],
-                   titulo_secundario=datos["titulo-secundario"],
+                   titulo_secundario=datos["titulo_secundario"],
                    terciario=datos["terciario"],
                    institucion_terciario=datos["institucion_terciario"],
-                   titulo_terciario=datos["titulo-terciario"],
+                   titulo_terciario=datos["titulo_terciario"],
                    universitario=datos["universitario"],
                    institucion_universitario=datos["institucion_universitario"],
-                   titulo_universitario=datos["titulo-universitario"],
+                   titulo_universitario=datos["titulo_universitario"],
                    otros_conocimientos=datos["otros_conocimientos"],
                    cursos=datos["cursos"],
                    idiomas=datos["idiomas"],
