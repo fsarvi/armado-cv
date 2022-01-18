@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'estilos.css' %}"  type="text/css">
-    <script src="{% static 'validaciones.js' %}"></script>
     <link rel="shortcut icon" href="{% static 'imagenes/cyberok.ico' %}" type="Cyber CV">
     <link rel="icon" href="{% static 'imagenes/cyberok.ico' %}" type="Cyber CV">
     <title>Armado del CV</title>
@@ -22,15 +21,15 @@
             
             <h3>Información personal</h3>
             <hr>
-            <form action="envio/" method="post" enctype = "multipart / form-data">
+            <form action="envio/" method="post" enctype = "multipart / form-data" id = "formulario">
                 {% csrf_token %}
-                <label>Nombre: <input type="text" name="nombre" size="40" required></label>
-                <label>Apellido: <input type="text" name="apellido" size="40" required></label>
+                <label>Nombre: <input type="text" name="nombre" id = "nombre" size="40" required></label>
+                <label>Apellido: <input type="text" name="apellido" id = "apellido" size="40" required></label>
                 <label>Fecha de nacimiento: <input type="date" name = "fecha-de-nacimiento" id = "date" value = "2021-12-26" min = "1945-01-01" max = "2021-12-31" required></label>
                 <label>Lugar de nacimiento: <input type="text" name="lugar-de-nacimiento" size="40"></label>
-                <label>Edad: <input type="number" name="edad" size="40" required></label>
-                <label>DNI: <input type="number" name="dni" size="40" required>(sin puntos ni guiones)</label>
-                <label>CUIL: <input type="number" name="cuil" size="40" required>(sin puntos ni guiones)</label>
+                <label>Edad: <input type="number" name="edad" id = "edad" size="40" required></label>
+                <label>DNI: <input type="number" name="dni" id = "dni"  size="40" required>(sin puntos ni guiones)</label>
+                <label>CUIL: <input type="number" name="cuil" id = "cuil" size="40" required>(sin puntos ni guiones)</label>
                 <label>Estado civil:
                     <div class="multiple">
                         <input type="radio" name="estado" value="soltero"> Soltero/a
@@ -40,7 +39,7 @@
                 <label>Dirección: <input type="text" name="direccion" size="40" required></label>
                 <label>Altura: <input type="number" name="altura" size="40" required></label>
                 <label>Localidad: <input type="text" name="localidad" size="40"></label>
-                <label>Celular: <input type="number" name="celular" size="40" required>(sin el 0 ni el 15)</label>
+                <label>Celular: <input type="number" name="celular" id = "celular" size="40" required>(sin el 0 ni el 15)</label>
                 <label>Correo electrónico: <input type="email" name = "correo" id="email" size="30"></label>
               
             <h3>Estudios cursados</h3>
@@ -163,5 +162,7 @@
             </form>
         </div>
     </div>
+
+    <script src="{% static 'validaciones.js' %}"></script>
 </body>
 </html>
