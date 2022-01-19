@@ -27,7 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-STATICFILES_DIRS = ['armado-cv/Templates/static']
+STATICFILES_DIRS = ['C:/Users/Fati/Documents/PROYECTOS/armado-cv/Templates/static']
 # Application definition
 
 INSTALLED_APPS = [

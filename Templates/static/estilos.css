@@ -1,3 +1,50 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+header{
+    background-color: #3ca4e3;
+    width: 100%;
+    margin: auto;
+    border-bottom: white solid;
+    border-radius: 0.5em;
+}
+
+nav, .nav-enlaces > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1.5em;
+    align-items: center;
+    text-align: center;
+    list-style: none;
+}
+
+.nav-logo > img{
+    width: 10em;
+}
+
+
+a{
+    text-decoration: none;
+    padding: 0.4em;
+    
+}
+
+#tienda{
+    font-size: 1.5em;
+    color: white;
+    font-family: "Arimo", "Arial", "Serif";
+    border: white solid;
+    border-radius: 0.5em;
+}
+
+#instagram > img, #wpp > img{
+    width: 3.8em;
+    padding:auto;
+}
+
 .contenedor{
     background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
     border-radius: 2em;
@@ -8,6 +55,7 @@
     flex-direction: column;
     justify-content: space-around;
     padding-bottom: 1em;
+    padding-top: 2em;
     font-size: 1.2em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 70%;
@@ -63,7 +111,7 @@ h3{
 
 
 body {
-    background-image: url('imagenes/fondo.jpg');
+    background-image: url('imagenes/fondo-bonito.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
