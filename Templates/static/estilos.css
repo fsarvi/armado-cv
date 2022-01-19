@@ -15,7 +15,7 @@ nav, .nav-enlaces > ul{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 1.5em;
+    padding: 1em;
     align-items: center;
     text-align: center;
     list-style: none;
@@ -146,6 +146,40 @@ input{
 /*Media QUERIES*/
 
 @media screen and (max-width:400px) {
+    
+
+
+    nav, .nav-enlaces{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0.5em;
+        align-items: center;
+        text-align: center;
+        list-style: none;
+    }
+
+    .nav-logo > img{
+        width: 5em;
+    }
+
+
+    a{
+        text-decoration: none;
+        padding: 0.2em;
+        
+    }
+
+    #tienda{
+        font-size: 1em;
+        
+        border-radius: 0.3em;
+    }
+
+    #instagram > img, #wpp > img{
+        width: 2em;
+    }
+    
     body{
         width: 100%;
         padding: 0%;
@@ -201,6 +235,37 @@ input{
 
 }
 @media screen and (min-width:401px) and (max-width: 640px) {
+    nav, .nav-enlaces{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 0.5em;
+        align-items: center;
+        text-align: center;
+        list-style: none;
+    }
+
+    .nav-logo > img{
+        width: 6em;
+    }
+
+
+    a{
+        text-decoration: none;
+        padding: 0.2em;
+        
+    }
+
+    #tienda{
+        font-size: 1.2em;
+        
+        border-radius: 0.3em;
+    }
+
+    #instagram > img, #wpp > img{
+        width: 2.5em;
+    }
+    
     body{
         width: 100%;
         padding: 0%;
